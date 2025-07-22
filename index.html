@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -185,9 +184,7 @@
     }
     
     input:focus {
-
-
-border-color: var(--accent);
+      border-color: var(--accent);
       outline: none;
       box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
     }
@@ -343,9 +340,7 @@ border-color: var(--accent);
         <h3>1. High School Graduate</h3>
         <ul>
           <li>Education: High School Diploma or equivalent.</li>
-
-
-<li>Experience: No prior experience required, but experience in sales, customer service, or community engagement is a plus.</li>
+          <li>Experience: No prior experience required, but experience in sales, customer service, or community engagement is a plus.</li>
           <li>Skills:
             <ul>
               <li>Basic communication and interpersonal skills.</li>
@@ -422,9 +417,7 @@ border-color: var(--accent);
       <h2>Additional Requirements</h2>
       <ul>
         <li><strong>Availability:</strong> Willingness to work flexible hours, including weekends or evenings, as needed.</li>
-
-
-<li><strong>Mobility:</strong> Ability to travel locally or regionally for recruitment, distribution, or agent support tasks.</li>
+        <li><strong>Mobility:</strong> Ability to travel locally or regionally for recruitment, distribution, or agent support tasks.</li>
         <li><strong>Technology:</strong> Comfortable using mobile apps, financial tracking systems, or other tools for float management.</li>
         <li><strong>Financial Acumen:</strong> Basic understanding of cash management principles for float servicing.</li>
       </ul>
@@ -461,7 +454,12 @@ border-color: var(--accent);
       <h1>Register with SIBO AGENCY</h1>
       <p style="text-align: center; margin-bottom: 30px;">Fill out the form below to apply for this exciting opportunity</p>
       
-      <form id="registration-form" action="/register" method="POST" enctype="multipart/form-data">
+      <form id="registration-form" action="https://formsubmit.co/sbmsalesmakteningco@gmail.com" method="POST" enctype="multipart/form-data">
+        <input type="hidden" name="_subject" value="New Job Application - Direct Sales Representative">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="#success-message">
+        
         <div class="form-group">
           <label for="full-name"><i class="fas fa-user"></i> Full Name</label>
           <input type="text" id="full-name" name="full-name" placeholder="Enter your full name" required>
@@ -495,9 +493,7 @@ border-color: var(--accent);
         <div class="form-group">
           <label for="cv"><i class="fas fa-file-upload"></i> Upload CV (PDF or DOC)</label>
           <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx" required>
-
-
-<span class="error" id="cv-error">Please upload a PDF or DOC file.</span>
+          <span class="error" id="cv-error">Please upload a PDF or DOC file.</span>
         </div>
         
         <button type="submit">
@@ -564,13 +560,15 @@ border-color: var(--accent);
       }
 
       if (isValid) {
+        // Show success message immediately
         document.getElementById('registration-form').style.display = 'none';
         document.getElementById('success-message').style.display = 'block';
-        // Optionally, uncomment to submit form to backend:
-        // this.submit();
         
         // Scroll to success message
         document.getElementById('success-message').scrollIntoView({ behavior: 'smooth' });
+        
+        // Submit the form to FormSubmit
+        this.submit();
       }
     });
   </script>

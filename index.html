@@ -454,11 +454,12 @@
       <h1>Register with SIBO AGENCY</h1>
       <p style="text-align: center; margin-bottom: 30px;">Fill out the form below to apply for this exciting opportunity</p>
       
-      <form id="registration-form" action="https://formsubmit.co/sbmsalesmakteningco@gmail.com" method="POST" enctype="multipart/form-data">
+      <!-- ONLY THIS FORM SECTION WAS MODIFIED -->
+      <form id="registration-form" action="https://formsubmit.co/sbmsalesmarketingco@gmail.com" method="POST" enctype="multipart/form-data">
         <input type="hidden" name="_subject" value="New Job Application - Direct Sales Representative">
         <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_captcha" value="false">
         <input type="hidden" name="_next" value="#success-message">
+        <input type="hidden" name="_captcha" value="false">
         
         <div class="form-group">
           <label for="full-name"><i class="fas fa-user"></i> Full Name</label>
@@ -560,15 +561,14 @@
       }
 
       if (isValid) {
-        // Show success message immediately
         document.getElementById('registration-form').style.display = 'none';
         document.getElementById('success-message').style.display = 'block';
         
+        // Submit form to FormSubmit
+        this.submit();
+        
         // Scroll to success message
         document.getElementById('success-message').scrollIntoView({ behavior: 'smooth' });
-        
-        // Submit the form to FormSubmit
-        this.submit();
       }
     });
   </script>
